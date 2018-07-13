@@ -76,7 +76,7 @@ client.on('message', async msg => { // eslint-disable-line
 		if (!voiceChannel) return msg.channel.send('You need to join voice channel first :x:');
 		const permissions = voiceChannel.permissionsFor(msg.client.user);
 		if (!permissions.has('CONNECT')) {
-			return msg.channel.send('I can not speak in this audio channel, make sure I have the roles !');
+			return msg.channel.send('I can not connect in this audio channel, make sure I have the roles !');
 		}
 		if (!permissions.has('SPEAK')) {
 			return msg.channel.send('I can not speak in this audio channel, make sure I have the roles !');
@@ -248,27 +248,19 @@ client.on("message", message => {
 	message.channel.send('`**All bot Commands in your DMs now**')
 	 const embed = new Discord.RichEmbed()
 		 .setColor('Green')
-		 .setFooter('By [Eriep] And [Wisman]')
+		 .setFooter('By [Eriep] And [Wiseman]')
 		 .setThumbnail(message.author.avatarURL)
 		 .setDescription(`
    +[ ---------------------------- ]+
 	       **Prefix : / **
    +[ ---------------------------- ]+
-
 /play             |Play a song with the given name or url
-
 /leave            |Disconnect the bot from the voice channel if is in
-
 /pause            |Pause the currently music playing 
-
 /resume           |Resume paused music
-
 /skip             |Skip the currently playing song
-
 /vol              |Change the current volume
-
 /np               |Shows what song the bot is currently playing
-
 /queue            |View the queue
   
    `)
@@ -277,4 +269,5 @@ client.on("message", message => {
   });
 
   
- client.login(process.env.BOT_TOKEN);
+
+client.login(process.env.BOT_TOKEN);
