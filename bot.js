@@ -1,4 +1,5 @@
-const Discord = require('discord.js');
+const FFMPEG = require ('ffmpeg-binaries');
+const Discord = require('discord.js')
 const { Client, Util } = require('discord.js');
 const client = new Discord.Client();
 const { PREFIX, GOOGLE_API_KEY } = require('./config');
