@@ -21,7 +21,7 @@ const queue = new Map();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Dating music |/help`,"http://twitch.tv/S-F")
+client.user.setGame(`Dating music |:help`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('+[-----------------------------------------------------------------]+')
@@ -244,7 +244,7 @@ function play(guild, song) {
 
 
 client.on("message", message => {
-	if (message.content === "/help") {
+	if (message.content === ":help") {
 	message.channel.send('`**All bot Commands in your DMs now**')
 	 const embed = new Discord.RichEmbed()
 		 .setColor('Green')
@@ -252,16 +252,16 @@ client.on("message", message => {
 		 .setThumbnail(message.author.avatarURL)
 		 .setDescription(`
    +[ ---------------------------- ]+
-	       **Prefix : / **
+	       **Prefix : : **
    +[ ---------------------------- ]+
-/play             |Play a song with the given name or url
-/leave            |Disconnect the bot from the voice channel if is in
-/pause            |Pause the currently music playing 
-/resume           |Resume paused music
-/skip             |Skip the currently playing song
-/vol              |Change the current volume
-/np               |Shows what song the bot is currently playing
-/queue            |View the queue
+:play             |Play a song with the given name or url
+:leave            |Disconnect the bot from the voice channel if is in
+:pause            |Pause the currently music playing 
+:resume           |Resume paused music
+:skip             |Skip the currently playing song
+:vol              |Change the current volume
+:np               |Shows what song the bot is currently playing
+:queue            |View the queue
   
    `)
    message.author.send(embed);
